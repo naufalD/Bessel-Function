@@ -10,6 +10,10 @@
 
 int main(int argc, char *argv[])
 {
+    int startOrder {0};
+    int endOrder {5};
+
+
     QApplication a(argc, argv);
     //MainWindow w;
 
@@ -22,7 +26,7 @@ int main(int argc, char *argv[])
     QwtPlotGrid* grid = new QwtPlotGrid();
     grid->attach( &plot );
 
-    for (int order {6};order<=10;++order){
+    for (int order {startOrder};order<=endOrder;++order){
         std::string strup {"order up "};
         strup.append(std::to_string(order));
         QString qstrup = QString::fromStdString(strup);
@@ -43,7 +47,7 @@ int main(int argc, char *argv[])
         curveup->attach( &plot );
     }
 
-    for (int order {6};order<=10;++order){
+    for (int order {startOrder};order<=endOrder;++order){
         std::string str {"order down "};
         str.append(std::to_string(order));
         QString qstr = QString::fromStdString(str);
