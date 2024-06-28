@@ -1,5 +1,5 @@
 ## Introduction
-Since I had free time after the end of the semester, I decided to learn computational physics using a textbook by Landau (2015)[^1]. To do that, I decided to use C++ with Qt and Qwt as the graphics library. As a start, lets try plotting out the Bessel function that is very common in physics.
+Since I had free time after the end of the semester, I decided to learn computational physics. This program is part of exercise 2.2 of the computational physics textbook by Landau (2015)[^1]. To do that, I decided to use C++ with Qt and Qwt as the graphics library. As a start, lets try plotting out the Bessel function that is very common in physics.
 
 [^1]: Landau, R. H. (2015). Computational physics problem solving with python. John Wiley & Sons, Incorporated. 
 
