@@ -1,4 +1,4 @@
-#include "bessel.h"
+#include "include/bessel.h"
 
 #include <QApplication>
 #include <QwtPlot>
@@ -10,8 +10,11 @@
 
 int main(int argc, char *argv[])
 {
-    int startOrder {0};
-    int endOrder {5};
+    int startOrder {5};
+    int endOrder {10};
+
+    double startX {0.05};
+    double endX {20};
 
 
     QApplication a(argc, argv);
@@ -39,8 +42,8 @@ int main(int argc, char *argv[])
         curveup->setRenderHint( QwtPlotItem::RenderAntialiased, true );
         QPolygonF pointsup;
 
-        for (double x {0.005}; x<=12;x=x+0.005){
-            pointsup << QPointF(x, alg_up(x, order)+0.5);
+        for (double x {startX}; x<=endX;x=x+0.05){
+            pointsup << QPointF(x, alg_up(x, order));
         }
 
         curveup->setSamples( pointsup );
@@ -62,8 +65,8 @@ int main(int argc, char *argv[])
         curve->setRenderHint( QwtPlotItem::RenderAntialiased, true );
         QPolygonF points;
 
-        for (double x {0.005}; x<=12;x=x+0.005){
-            points << QPointF(x, alg_down(x, order)-0.5);
+        for (double x {startX}; x<=endX;x=x+0.005){
+            points << QPointF(x, alg_down(x, order));
         }
         curve->setSamples( points );
         curve->attach( &plot );

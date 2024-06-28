@@ -14,11 +14,11 @@ LIBS += -L/usr/local/qwt-6.3.0/lib -lqwt
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    bessel.cpp \
-    main.cpp \
+    src/bessel.cpp \
+    src/main.cpp \
 
 HEADERS += \
-    bessel.h
+    include/bessel.h
 
 
 
