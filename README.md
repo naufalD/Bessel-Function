@@ -4,12 +4,21 @@ Since I had free time after the end of the semester, I decided to learn computat
 [^1]: Landau, R. H. (2015). Computational physics problem solving with python. John Wiley & Sons, Incorporated. 
 
 ## Bessel functions
-Bessel functions are canonical solutions to the differential equation of the form 
+Bessel functions are canonical solutions to the differential equation of the form<br/>
+
 $$x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}+(x^2-\alpha^2)y=0$$
-We can get solutions $j_{\alpha}$ for integer $\alpha$ using numerical recursion relations with 
+<br/>
+
+We can get solutions $j_{\alpha}$ for integer $\alpha$ using numerical recursion relations with <br/>
+
 $$j_{\alpha+1} = \frac{2\alpha+1}{x}j_{\alpha}-j_{\alpha-1}$$
-being the relation by recursing up from $j_0=\frac{sin(x)}{x}$ and
+<br/>
+
+being the relation by recursing up from $j_0=\frac{sin(x)}{x}$ and<br/>
+
 $$j_{\alpha-1} = \frac{2\alpha+1}{x}j_{\alpha}-j_{\alpha+1}$$
+<br/>
+
 being the relation by recursing down from an arbitrary high $\alpha$ to the required order. Furthermore, the result for the down recursion must be normalized by multiplying by $\frac{\text{sin}(x)}{xj_0}$. 
 
 ## Disadvantages of up recursion
